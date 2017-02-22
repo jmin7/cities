@@ -18,4 +18,10 @@ class CitiesController < ApplicationController
     redirect_to @city
   end
 
+  private
+  def city_params
+    params.require(:city).permit(:city_name, :photo_url)
+  end
+  
+
 end
