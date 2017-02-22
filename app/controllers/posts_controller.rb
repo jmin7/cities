@@ -24,7 +24,7 @@ class PostsController < ApplicationController
 
   def update
     @city = City.find(params[:city_id])
-    @post = @city.post.find(params[:id])
+    @post = @city.posts.find(params[:id])
 
     if @post.update(post_params)
       redirect_to city_path(@city)
