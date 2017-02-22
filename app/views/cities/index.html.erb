@@ -2,7 +2,7 @@
     <p class="cities">Cities</p>
     <p class="city_each">
       <% @cities.each do |city| %>
-        <%= link_to city.city_name, city_path(city) %>
+        <%= link_to city.city_name, city_path(city) %><br>
       <% end %>
     </p>
 
