@@ -13,3 +13,41 @@
  *= require_tree .
  *= require_self
  */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import url( 'https://fonts.googleapis.com/css?family=Barrio|Pangolin');
+@import url( 'https://fonts.googleapis.com/css?family=Sansita');
+
+
+.city_index {
+  font-family: 'Barrio', cursive;
+  text-align: center;
+  margin: 3em;
+  background-image: url("./pic/cities.png");
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.cities {
+  font-size: 8em;
+}
+
+.city_each {
+  font-size: 5em;
+}
+
+.city_show {
+  font-family: 'Sansita', sans-serif;
+  text-align: center;
+  margin-bottom: 1em;
+  .pic {
+    margin: 4em auto;
+  }
+}
+
+.city_show_button {
+  text-align: center;
+  margin-bottom: 5em;
+}
