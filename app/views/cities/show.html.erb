@@ -1,10 +1,8 @@
 <body style="background-color: #ffdc7c">
     <div class="city_show">
-        <h1>Welcome to
-            <%= @city.city_name %>
-            !
-        </h1>
-
+        <h1>Welcome to <%= @city.city_name %> !</h1>
+            <p class="pic"><img src="<%= @city.photo_url %>" width="600px" height="600px"></p>
+      
         <div class="city_show_button">
             <button type="button" class="btn btn-secondary">
                 <%= link_to 'City List', cities_path %>
