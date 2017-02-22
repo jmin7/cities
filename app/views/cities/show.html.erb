@@ -1,12 +1,24 @@
 <body style="background-color: #ffdc7c">
     <div class="city_show">
-        <h1>Welcome to <%= @city.city_name %> !</h1>
-            <p class="pic"><img src="<%= @city.photo_url %>" width="600px" height="600px"></p>
-      
-        <div class="city_show_button">
-            <button type="button" class="btn btn-secondary">
-                <%= link_to 'City List', cities_path %>
-            </button>
+        <h1>Welcome to
+            <%= @city.city_name %>
+            !</h1>
+        <p class="pic"><img src="<%= @city.photo_url %>" width="600px" height="600px"></p>
 
-      </div>
-    </body>
+        <div>
+            <% @posts.each do |post| %>
+            <%= link_to 'title', city_post_path %>
+            <% end %>
+
+        </div>
+    </div>
+
+    <div class="city_show_button">
+        <button type="button" class="btn btn-secondary">
+            <%= link_to 'City List', cities_path %>
+        </button>
+        <button type="button" class="btn btn-secondary">
+            <%= link_to 'Add New Post', new_city_post_path(@city) %>
+        </button>
+    </div>
+</body>
