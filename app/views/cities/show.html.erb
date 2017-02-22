@@ -7,7 +7,9 @@
 
         <div>
             <% @posts.each do |post| %>
-            <%= link_to 'title', city_post_path %>
+            <a href="/cities/<%= @city.id %>/posts/<%= post.id %>">
+                <h3>Title: <%= post.title %></h3>
+            </a>
             <% end %>
 
         </div>
