@@ -1,11 +1,10 @@
 <div class="city_index">
     <p class="cities">Cities</p>
     <p class="city_each">
-        <% @cities.each do |city|%>
-        <%=link_to city.city_name, city_path(city)%><br>
-
-        <% end %>
+      <% @cities.each do |city| %>
+        <%= link_to city.city_name, city_path(city) %>
+      <% end %>
     </p>
 
-    <h1><%= link_to 'Add New City', new_city_path%></h1>
+    <%= link_to 'Add New City', new_city_path %>
 </div>
